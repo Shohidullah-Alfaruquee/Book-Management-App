@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="book.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="book.css">
     <title>Book Shelf</title>
 </head>
 <body>
     <div class="book-image">
-        <img src="./images/book.png" alt="">
+        <img src="./images/book.png" alt="logo">
         <h1>Book Management App</h1>
-        <br>
         <h3 id="msg" class="message "></h3>
     </div>
     <div class="book-form-container">
         <form id="book-form">
 
             <div class="input-container">
-                <div class="input-label"><label for="book-name">Book Name:</label></div>
+                <div class="input-label"><div class="label">Book Name:</div></div>
                 <div class="input-feild"><input class="input-form" type="text" id="book-name" placeholder="Please write book name"></div>
             </div>
 
             <div class="input-container">
-                <div class="input-label"><label for="author-name">Author Name:</label></div>
+                <div class="input-label"><div class="label">Author Name:</div></div>
                 <div class="input-feild"><input class="input-form" type="text" id="author-name" placeholder="Please write author name"></div>
             </div>
 
             <div class="input-container">
-                <div class="input-label"><label for="total-page">Total Page:</label></div>
-                <div class="input-feild"><input class="input-form" type="text" id="total-page" placeholder="Please write total page"></div>
+                <div class="input-label"><div class="label">Total Page:</div></div>
+                <div class="input-feild"><input class="input-form" type="number" id="total-page" placeholder="Please write total page"></div>
             </div>            
  
             <div class="input-container">

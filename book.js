@@ -134,12 +134,12 @@ function editBookList(bookIndex){
 
     <div class="input-container">
         <div class="input-label"><label for="read-page">Read Page:</label></div>
-        <div class="input-feild"><input class="input-form" type="text" id="read-page" placeholder="Please write page no. have been already read"></div>
+        <div class="input-feild"><input class="input-form" type="number" id="read-page" placeholder="Please write page no. have been already read"></div>
     </div>
 
     <div class="input-container">
         <div class="input-label"><label for="total-page">Total Page:</label></div>
-        <div class="input-feild"><input class="input-form" type="text" id="total-page" placeholder="Please write total page"></div>
+        <div class="input-feild"><input class="input-form" type="number" id="total-page" placeholder="Please write total page"></div>
     </div>            
 
     <div class="input-container">
@@ -173,11 +173,11 @@ function updateBookList(bookIndex){
     if(readPage==totalPage){
         bookArr.readingStatus = `Completed`;
     }else{
-        if (readPage<totalPage) {
-            bookArr.readingStatus = `Reading Continue`;
-        }else{
-            bookArr.readingStatus = 'Not read';
-        }
+        bookArr.readingStatus = `Reading Continue`;
+    }
+    if(!document.getElementById("read-page").value||document.getElementById("read-page").value==0){
+        bookArr.readPage = 'Not started';
+        bookArr.readingStatus = `Not read`;
     }
     bookListArr.splice(bookIndex,1,bookArr);
     setBookListToLocalStorage(bookListArr);
